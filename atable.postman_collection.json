@@ -1,0 +1,2987 @@
+{
+	"info": {
+		"_postman_id": "49ad957c-f93d-4de4-9ebe-d62d0c30016f",
+		"name": "atable",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "card",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/card/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"card",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"card_num\": \"new card\",\r\n    \"expiration_date\":\"22/9/2021\",\r\n    \"ccv\": \"442\",\r\n    \"user_id\": \"61062aed6d9a5eda640a0269\",\r\n    \"first_name\": \"Admin\",\r\n    \"last_name\": \"Cafeperks\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/card/addCard",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"card",
+								"addCard"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/card/61062aed6d9a5eda640a0269",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"card",
+								"61062aed6d9a5eda640a0269"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"card_num\": \"new card\",\r\n    \"expiration_date\":\"22/9/2021\",\r\n    \"ccv\": \"442\",\r\n    \"user_id\": \"61062aed6d9a5eda640a0269\",\r\n    \"first_name\": \"Admin\",\r\n    \"last_name\": \"Cafeperks\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/card/6125cfbbaf46eb46541f82fa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"card",
+								"6125cfbbaf46eb46541f82fa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/card/6125cfbbaf46eb46541f82fa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"card",
+								"6125cfbbaf46eb46541f82fa"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/users/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"creditCard\": {\r\n            \"isNull\": false,\r\n            \"name\": \"smama\",\r\n            \"lastFourDigits\": \"4242\",\r\n            \"customerId\": \"cus_K1eNIK4axmqh6f\"\r\n        },\r\n        \"role\": \"user\",\r\n        \"isSocial\": false,\r\n        \"cartCount\": 0,\r\n        \"firstName\": \"ali\",\r\n        \"lastName\": \"asad\",\r\n        \"email\": \"ali@gmail.com\",\r\n        \"password\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"creditCard\": {\r\n            \"isNull\": false,\r\n            \"name\": \"smama\",\r\n            \"lastFourDigits\": \"4242\",\r\n            \"customerId\": \"cus_K1eNIK4axmqh6f\"\r\n        },\r\n        \"role\": \"user\",\r\n        \"isSocial\": false,\r\n        \"cartCount\": 0,\r\n        \"firstName\": \"ali\",\r\n        \"lastName\": \"asad\",\r\n        \"email\": \"ali@gmail.com\",\r\n        \"password\": \"12345\",\r\n        \"newPassword\": \"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/users/6125d25daf19920394e4a1d2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"6125d25daf19920394e4a1d2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUserByadminSide",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"role\": \"user\",\r\n    \"isSocial\": false,\r\n    \"cartCount\": 8,\r\n    \"email\": \"asad@gamil.com\",\r\n    \"firstName\": \"ali\",\r\n    \"lastName\": \"asad\",\r\n    \"creditCard\": {\r\n        \"name\": \"CC\",\r\n        \"lastFourDigits\": \"1234\",\r\n        \"customerId\": \"12131231\",\r\n        \"isNull\": false\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/users/updateuserbyadmin/6125d25daf19920394e4a1d2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"updateuserbyadmin",
+								"6125d25daf19920394e4a1d2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"asad@gamil.com\",\r\n    \"password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/users/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "current",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2MTI1ZDI1ZGFmMTk5MjAzOTRlNGExZDIiLCJpYXQiOjE2Mjk4Njk0NzksImV4cCI6MTYzMDQ3NDI3OX0.c75JoeGPjXOvWFyrh5-vVqyD5M3vnLKIzaQ9mPArAdw",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:5000/users/current",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"current"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/users/6125d25daf19920394e4a1d2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"6125d25daf19920394e4a1d2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addCreditCard",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"credit card\",\r\n    \"token\":\"tok_us\",\r\n    \"lastFourDigits\":\"1234\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/users/addCreditCard/6125d25daf19920394e4a1d2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"addCreditCard",
+								"6125d25daf19920394e4a1d2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeCreditCard",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/users/removeCreditCard/6125d25daf19920394e4a1d2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"removeCreditCard",
+								"6125d25daf19920394e4a1d2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/users/6125d25daf19920394e4a1d2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"users",
+								"6125d25daf19920394e4a1d2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "restaurants",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/resturants/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"resturants",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "hamza@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "resturant_name",
+									"value": "Cafe Perks",
+									"type": "text"
+								},
+								{
+									"key": "resturant_desc",
+									"value": "description",
+									"type": "text"
+								},
+								{
+									"key": "resturant_lat",
+									"value": "20.89684",
+									"type": "text"
+								},
+								{
+									"key": "resturant_lng",
+									"value": "55.493667",
+									"type": "text"
+								},
+								{
+									"key": "resturant_city",
+									"value": "Lahore",
+									"type": "text"
+								},
+								{
+									"key": "resturant_image",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/cafeeperks.png"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "resturant_address",
+									"value": "À Définir 97400 Saint-Denis",
+									"type": "text"
+								},
+								{
+									"key": "resturant_zipCode",
+									"value": "75008",
+									"type": "text"
+								},
+								{
+									"key": "resturant_menu",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "bank",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "newPassword",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/resturants/6108dfdc6d9a5eda640a03a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"resturants",
+								"6108dfdc6d9a5eda640a03a2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "alii@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "resturant_name",
+									"value": "Cafe Perk",
+									"type": "text"
+								},
+								{
+									"key": "resturant_desc",
+									"value": "description",
+									"type": "text"
+								},
+								{
+									"key": "resturant_lat",
+									"value": "20.89684",
+									"type": "text"
+								},
+								{
+									"key": "resturant_lng",
+									"value": "55.493667",
+									"type": "text"
+								},
+								{
+									"key": "resturant_city",
+									"value": "Lahore",
+									"type": "text"
+								},
+								{
+									"key": "resturant_image",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/cafeeperks.png"
+								},
+								{
+									"key": "password",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "resturant_address",
+									"value": "À Définir 97400 Saint-Denis",
+									"type": "text"
+								},
+								{
+									"key": "resturant_zipCode",
+									"value": "75008",
+									"type": "text"
+								},
+								{
+									"key": "resturant_menu",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "bank",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "newPassword",
+									"value": "12345",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "+923207107859",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "2000-08-25T15:08:17+05:00",
+									"type": "text"
+								},
+								{
+									"key": "front",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/coffee3.png"
+								},
+								{
+									"key": "back",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/cafeeperks.png"
+								},
+								{
+									"key": "iban",
+									"value": "FR1420041010050500013M02606",
+									"type": "text"
+								},
+								{
+									"key": "bankName",
+									"value": "HBL",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/resturants/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"resturants",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatebyadmin",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "ali@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "resturant_name",
+									"value": "Cafe Perks",
+									"type": "text"
+								},
+								{
+									"key": "resturant_desc",
+									"value": "description",
+									"type": "text"
+								},
+								{
+									"key": "resturant_lat",
+									"value": "20.89684",
+									"type": "text"
+								},
+								{
+									"key": "resturant_lng",
+									"value": "55.493667",
+									"type": "text"
+								},
+								{
+									"key": "resturant_city",
+									"value": "Lahore",
+									"type": "text"
+								},
+								{
+									"key": "resturant_image",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/coffee.jfif"
+								},
+								{
+									"key": "password",
+									"value": "pass",
+									"type": "text"
+								},
+								{
+									"key": "resturant_address",
+									"value": "À Définir 97400 Saint-Denis",
+									"type": "text"
+								},
+								{
+									"key": "resturant_zipCode",
+									"value": "75008",
+									"type": "text"
+								},
+								{
+									"key": "resturant_menu",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "bank",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "newPassword",
+									"value": "12345",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/resturants/updatebyadmin/6124cde0766bd1501524cfe6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"resturants",
+								"updatebyadmin",
+								"6124cde0766bd1501524cfe6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "authenticate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"ali@gmail.com\",\r\n    \"password\":\"12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/resturants/authenticate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"resturants",
+								"authenticate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "current",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/resturants/current",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"resturants",
+								"current"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/resturants/6124cde0766bd1501524cfe6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"resturants",
+								"6124cde0766bd1501524cfe6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/resturants/612620bfe46c6c46383db608",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"resturants",
+								"612620bfe46c6c46383db608"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addBankOfRestaurant",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "+923207107859",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "Tue Aug 24 2000 11:14:33 GMT+0500 (Pakistan Standard Time)",
+									"type": "text"
+								},
+								{
+									"key": "bankName",
+									"value": "HBL",
+									"type": "text"
+								},
+								{
+									"key": "iban",
+									"value": "FR1420041010050500013M02606",
+									"type": "text"
+								},
+								{
+									"key": "front",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/coffee3.png"
+								},
+								{
+									"key": "back",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/cafeeperks.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/resturants/edit-bank/6124cde0766bd1501524cfe6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"resturants",
+								"edit-bank",
+								"6124cde0766bd1501524cfe6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "editBank",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "+923207107859",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "Tue Aug 24 2000 11:14:33 GMT+0500 (Pakistan Standard Time)",
+									"type": "text"
+								},
+								{
+									"key": "bankName",
+									"value": "HBL",
+									"type": "text"
+								},
+								{
+									"key": "iban",
+									"value": "FR1420041010050500013M02606",
+									"type": "text"
+								},
+								{
+									"key": "stripeID",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "front",
+									"type": "file",
+									"src": "/C:/Users/user/Pictures/Screenshots/Screenshot (2).png"
+								},
+								{
+									"key": "back",
+									"type": "file",
+									"src": "/C:/Users/user/Pictures/Screenshots/Screenshot (3).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/resturants/add-bank/6108dfdc6d9a5eda640a03a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"resturants",
+								"add-bank",
+								"6108dfdc6d9a5eda640a03a2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cart",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/cart/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cart",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AddtoCart",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dish_id\": \"611a1bb359b7e04ca81eed97\",\r\n  \"dish_quantitiy\": 2,\r\n  \"dish_price\": 250,\r\n  \"user_id\": \"611b8a7884f3e729881b2368\",\r\n  \"resturant_id\":\"6108dfdc6d9a5eda640a03a2\",\r\n  \"cart_count\":4,\r\n  \"is_asap\":false,\r\n  \"status\":3,\r\n  \"order_time\":\"2:00\"\r\n  \r\n  \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/cart/AddtoCart",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cart",
+								"AddtoCart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/cart/6124c58feb9ce241c20ce09d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cart",
+								"6124c58feb9ce241c20ce09d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update quantity",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dish_quantitiy\":8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/cart/Update/6124c9c8eb9ce241c20ce0a5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cart",
+								"Update",
+								"6124c9c8eb9ce241c20ce0a5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "changeQuantityInCart",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dish_id\":\"611a1bb359b7e04ca81eed97\",\r\n    \"dish_price\":\"300\",\r\n    \"changeType\":\"inc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/cart/changeQuantityInCart/611b8a7884f3e729881b2368",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cart",
+								"changeQuantityInCart",
+								"611b8a7884f3e729881b2368"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/cart/6124c9c8eb9ce241c20ce0a5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cart",
+								"6124c9c8eb9ce241c20ce0a5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "RemoveAll",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userId\":\"611b8a7884f3e729881b2368\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/cart/clear_cart/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cart",
+								"clear_cart",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "filter",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/filter",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"filter"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "forgot",
+			"item": [
+				{
+					"name": "resetPassword",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n      \"email\": \"ali@gmail.com\",\r\n      \"role\": \"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/forgotPassword",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"forgotPassword"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tags",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/tags",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tags"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dishs",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/dishs/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"dishs",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "current",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/dishs/current",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"dishs",
+								"current"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "dish_name",
+									"value": "cofeeee",
+									"type": "text"
+								},
+								{
+									"key": "dish_description",
+									"value": "nescafe cofee",
+									"type": "text"
+								},
+								{
+									"key": "dish_images",
+									"type": "file",
+									"src": [
+										"/C:/Users/user/Downloads/coffee3.png",
+										"/C:/Users/user/Downloads/coffee2.jfif",
+										"/C:/Users/user/Downloads/coffee.jfif"
+									]
+								},
+								{
+									"key": "rating",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "distance",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "300",
+									"type": "text"
+								},
+								{
+									"key": "dish_type",
+									"value": "61127736cc53b63efcebb769",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "cofee",
+									"type": "text"
+								},
+								{
+									"key": "resturant_id",
+									"value": "6108dfdc6d9a5eda640a03a2",
+									"type": "text"
+								},
+								{
+									"key": "ratingCount",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "special_item",
+									"value": "5f71b4105b71911561f3032d",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/dishs/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"dishs",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "dish_name",
+									"value": "cofeeee",
+									"type": "text"
+								},
+								{
+									"key": "dish_description",
+									"value": "nescafe cofee",
+									"type": "text"
+								},
+								{
+									"key": "dish_images",
+									"type": "file",
+									"src": [
+										"/C:/Users/user/Downloads/coffee3.png",
+										"/C:/Users/user/Downloads/coffee2.jfif",
+										"/C:/Users/user/Downloads/coffee.jfif"
+									]
+								},
+								{
+									"key": "rating",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "distance",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "300",
+									"type": "text"
+								},
+								{
+									"key": "dish_type",
+									"value": "61127736cc53b63efcebb769",
+									"type": "text"
+								},
+								{
+									"key": "tags",
+									"value": "cofee",
+									"type": "text"
+								},
+								{
+									"key": "resturant_id",
+									"value": "6108dfdc6d9a5eda640a03a2",
+									"type": "text"
+								},
+								{
+									"key": "ratingCount",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "special_item",
+									"value": "5f71b4105b71911561f3032d",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/dishs/611a1bb359b7e04ca81eed97",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"dishs",
+								"611a1bb359b7e04ca81eed97"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllWithPagination",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/dishs/pagination/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"dishs",
+								"pagination",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/dishs/6108dfdc6d9a5eda640a03a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"dishs",
+								"6108dfdc6d9a5eda640a03a2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/dishs/6108dfdc6d9a5eda640a03a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"dishs",
+								"6108dfdc6d9a5eda640a03a2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByIdForUpdate",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/dishs/updateDataInfo/611a1bb359b7e04ca81eed97",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"dishs",
+								"updateDataInfo",
+								"611a1bb359b7e04ca81eed97"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByResturentId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/dishs/restaurant/6108dfdc6d9a5eda640a03a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"dishs",
+								"restaurant",
+								"6108dfdc6d9a5eda640a03a2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "cusine type",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"drinks\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/cuisineType/addcuisinetype/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cuisineType",
+								"addcuisinetype",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Pakistanaise\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/cuisineType/6125f73251aee506d00bd807",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cuisineType",
+								"6125f73251aee506d00bd807"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/cuisineType/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cuisineType",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/cuisineType/6125f73251aee506d00bd807",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cuisineType",
+								"6125f73251aee506d00bd807"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/cuisineType/6125f73251aee506d00bd807",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"cuisineType",
+								"6125f73251aee506d00bd807"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "specialItems",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"drinks\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/specialItems/addspecialItem/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"specialItems",
+								"addspecialItem",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Pakistanaise\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/specialItems/6125f78d51aee506d00bd808",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"specialItems",
+								"6125f78d51aee506d00bd808"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/specialItems/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"specialItems",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/specialItems/6125f78d51aee506d00bd808",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"specialItems",
+								"6125f78d51aee506d00bd808"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/specialItems/6125f78d51aee506d00bd808",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"specialItems",
+								"6125f78d51aee506d00bd808"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dishList",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"drinks\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/dishList/addDishItem/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"dishList",
+								"addDishItem",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Pakistanaise\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/dishList/6125f7c451aee506d00bd809",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"dishList",
+								"6125f7c451aee506d00bd809"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/dishList/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"dishList",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/dishList/6125f7c451aee506d00bd809",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"dishList",
+								"6125f7c451aee506d00bd809"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/dishList/6125f7c451aee506d00bd809",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"dishList",
+								"6125f7c451aee506d00bd809"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "dishType",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"drinks\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/dishType/addDishType/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"dishType",
+								"addDishType",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Pakistanaise\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/dishType/6125f86c51aee506d00bd80a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"dishType",
+								"6125f86c51aee506d00bd80a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/dishType/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"dishType",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/dishType/6125f86c51aee506d00bd80a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"dishType",
+								"6125f86c51aee506d00bd80a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/dishType/6125f86c51aee506d00bd80a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"dishType",
+								"6125f86c51aee506d00bd80a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "order",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/orders",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"total_items\":4,\r\n    \"total_price\":400,\r\n    \"user_id\":\"611b8a7884f3e729881b2368\",\r\n    \"table_no\":\"3\",\r\n    \"resturant_id\": \"6108dfdc6d9a5eda640a03a2\",\r\n    \"cart_id\": \"61237d63a9fddc0cc80d6b42\",\r\n    \"order_status\":\"\",\r\n    \"cart_items\":[],\r\n    \"customer_name\":\"ali\",\r\n    \"is_asap\":true,\r\n    \"order_time\":\"4:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/orders/submitOrder",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"orders",
+								"submitOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateStatus",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"total_items\":4,\r\n    \"total_price\":400,\r\n    \"user_id\":\"611b8a7884f3e729881b2368\",\r\n    \"table_no\":\"3\",\r\n    \"resturant_id\": \"6108dfdc6d9a5eda640a03a2\",\r\n    \"cart_id\": \"61237d63a9fddc0cc80d6b42\",\r\n    \"order_status\":\"2\",\r\n    \"cart_items\":[],\r\n    \"customer_name\":\"ali\",\r\n    \"is_asap\":true,\r\n    \"order_time\":\"4:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/orders/Update/6126086751aee506d00bd80b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"orders",
+								"Update",
+								"6126086751aee506d00bd80b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/orders/6108dfdc6d9a5eda640a03a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"orders",
+								"6108dfdc6d9a5eda640a03a2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/orders/6126086751aee506d00bd80b",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"orders",
+								"6126086751aee506d00bd80b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPastOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/orders/getPastOrders/6108dfdc6d9a5eda640a03a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"orders",
+								"getPastOrders",
+								"6108dfdc6d9a5eda640a03a2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserPastOrders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/orders/getUserPastOrders/611b8a7884f3e729881b2368",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"orders",
+								"getUserPastOrders",
+								"611b8a7884f3e729881b2368"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rating",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/rating",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"rating"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/rating/61062aed6d9a5eda640a0269",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"rating",
+								"61062aed6d9a5eda640a0269"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dish_id\":\"6124d4f52263705a5faae948\",\r\n    \"resturant_id\":\"6114ca770527f89c1d637270\",\r\n    \"user_id\":\"6114b8b40527f89c1d63726f\",\r\n    \"message\":\"\",\r\n    \"rating\":4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/rating/rate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"rating",
+								"rate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dish_id\":\"611a1bb359b7e04ca81eed97\",\r\n    \"resturant_id\":\"6108dfdc6d9a5eda640a03a2\",\r\n    \"user_id\":\"61062aed6d9a5eda640a0269\",\r\n    \"message\":\"\",\r\n    \"rating\":5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/rating/6124d4f52263705a5faae948",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"rating",
+								"6124d4f52263705a5faae948"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/rating/6124d4f52263705a5faae948",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"rating",
+								"6124d4f52263705a5faae948"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rating_queue",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/rating_queue",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"rating_queue"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/rating_queue/611b8a7884f3e729881b2368",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"rating_queue",
+								"611b8a7884f3e729881b2368"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dish_id\":\"611a1bb359b7e04ca81eed97\",\r\n    \"resturant_id\":\"6108dfdc6d9a5eda640a03a2\",\r\n    \"user_id\":\"61062aed6d9a5eda640a0269\",\r\n    \"rating_id\":\"61238f7835f3582360618461\",\r\n    \"rating\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/rating_queue/rate",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"rating_queue",
+								"rate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dish_id\":\"611a1bb359b7e04ca81eed97\",\r\n    \"resturant_id\":\"6108dfdc6d9a5eda640a03a2\",\r\n    \"user_id\":\"61062aed6d9a5eda640a0269\",\r\n    \"rating_id\":\"61238f7835f3582360618461\",\r\n    \"rating\":3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/rating_queue/6114e4ce165bef24585e0d4f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"rating_queue",
+								"6114e4ce165bef24585e0d4f"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/rating_queue/6114e4ce165bef24585e0d4f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"rating_queue",
+								"6114e4ce165bef24585e0d4f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tables",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/tables/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tables",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "table_number",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "table_url",
+									"value": "https://www.google.com",
+									"type": "text"
+								},
+								{
+									"key": "resturant_id",
+									"value": "6108dfdc6d9a5eda640a03a2",
+									"type": "text"
+								},
+								{
+									"key": "users_id",
+									"value": "61245d19106a5724340b5d1c",
+									"type": "text"
+								},
+								{
+									"key": "chats_id",
+									"value": "611b72b7060096229074ad35",
+									"type": "text"
+								},
+								{
+									"key": "qrCode",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/coffee3.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/tables/61260bc583745b1b40a07086",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tables",
+								"61260bc583745b1b40a07086"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unAssignTable",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "table_number",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "table_url",
+									"value": "https://www.google.com",
+									"type": "text"
+								},
+								{
+									"key": "resturant_id",
+									"value": "6108dfdc6d9a5eda640a03a2",
+									"type": "text"
+								},
+								{
+									"key": "users_id",
+									"value": "61245d19106a5724340b5d1c",
+									"type": "text"
+								},
+								{
+									"key": "chats_id",
+									"value": "611b72b7060096229074ad35",
+									"type": "text"
+								},
+								{
+									"key": "qrCode",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/coffee3.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/tables/un_assign_table/61260bc583745b1b40a07086",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tables",
+								"un_assign_table",
+								"61260bc583745b1b40a07086"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "assign_table",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "table_number",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "table_url",
+									"value": "https://www.google.com",
+									"type": "text"
+								},
+								{
+									"key": "resturant_id",
+									"value": "6108dfdc6d9a5eda640a03a2",
+									"type": "text"
+								},
+								{
+									"key": "users_id",
+									"value": "61245d19106a5724340b5d1c",
+									"type": "text"
+								},
+								{
+									"key": "chats_id",
+									"value": "611b72b7060096229074ad35",
+									"type": "text"
+								},
+								{
+									"key": "qrCode",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/coffee3.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/tables/assign_table/61260bc583745b1b40a07086",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tables",
+								"assign_table",
+								"61260bc583745b1b40a07086"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unAssignAfterInterval",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "table_number",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "table_url",
+									"value": "https://www.google.com",
+									"type": "text"
+								},
+								{
+									"key": "resturant_id",
+									"value": "6108dfdc6d9a5eda640a03a2",
+									"type": "text"
+								},
+								{
+									"key": "users_id",
+									"value": "61245d19106a5724340b5d1c",
+									"type": "text"
+								},
+								{
+									"key": "chats_id",
+									"value": "611b72b7060096229074ad35",
+									"type": "text"
+								},
+								{
+									"key": "qrCode",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/coffee3.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/tables/auto_un_assign_table/61260bc583745b1b40a07086",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tables",
+								"auto_un_assign_table",
+								"61260bc583745b1b40a07086"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "table_number",
+									"value": "4",
+									"type": "text"
+								},
+								{
+									"key": "table_url",
+									"value": "https://www.google.com",
+									"type": "text"
+								},
+								{
+									"key": "resturant_id",
+									"value": "6108dfdc6d9a5eda640a03a2",
+									"type": "text"
+								},
+								{
+									"key": "users_id",
+									"value": "61245d19106a5724340b5d1c",
+									"type": "text"
+								},
+								{
+									"key": "chats_id",
+									"value": "611b72b7060096229074ad35",
+									"type": "text"
+								},
+								{
+									"key": "qrCode",
+									"type": "file",
+									"src": "/C:/Users/user/Downloads/coffee3.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:5000/tables/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tables",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByResturentId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/tables/restaurant/6108dfdc6d9a5eda640a03a2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tables",
+								"restaurant",
+								"6108dfdc6d9a5eda640a03a2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/tables/61260bc583745b1b40a07086",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tables",
+								"61260bc583745b1b40a07086"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/tables/61260bc583745b1b40a07086",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"tables",
+								"61260bc583745b1b40a07086"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "chat",
+			"item": [
+				{
+					"name": "getAll",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "text"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/chat/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"chat",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"messages\": [],\r\n    \"table_id\": \"611b725f060096229074ad24\",\r\n    \"restaurant_id\": \"6108dfdc6d9a5eda640a03a2\",\r\n    \"user_id\": \"61062aed6d9a5eda640a0269\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/chat/create_chat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"chat",
+								"create_chat"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/chat/6124bb8e73e5003b3010aad2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"chat",
+								"6124bb8e73e5003b3010aad2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send_message",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"chat_id\":\"61260cce83745b1b40a07087\",\r\n    \"message\": \"Sentence 1\",\r\n    \"from\": \"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/chat/send_message",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"chat",
+								"send_message"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/chat/61260cce83745b1b40a07087",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"chat",
+								"61260cce83745b1b40a07087"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "markAsRead",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/chat/markAsRead/61260cce83745b1b40a07087",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"chat",
+								"markAsRead",
+								"61260cce83745b1b40a07087"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unreadCount",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/chat/unreadCount/61260cce83745b1b40a07087",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"chat",
+								"unreadCount",
+								"61260cce83745b1b40a07087"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "unreadCountUser",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/chat/unreadCountUser/61260cce83745b1b40a07087",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"chat",
+								"unreadCountUser",
+								"61260cce83745b1b40a07087"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
